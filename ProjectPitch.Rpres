@@ -1,0 +1,55 @@
+Can you predict your child's height?
+========================================================
+author: Chinlock
+date: June 2015
+transition: rotate
+
+<seal>
+Project for coursera course in "Developing Data Products"
+</seal>
+
+Worry???
+=====
+
+## Have you ever wondered what your child's height will be?  
+
+## Is he/she going to be ....
+
+- **Taller ?**
+- *Shorter ??*
+- Or the same height as you ???
+
+Well, Galton has some data
+======
+
+Galton collected parents' and children's height. 
+
+How do we use this to predict a child's height based on the parent's height?
+
+```{r, echo=FALSE}
+library("UsingR")
+data(Galton)
+summary(Galton)
+head(Galton)
+```
+
+Let's take a closer look
+=======
+
+The data points seems to be clustered around a liner relationship.  
+Let's fit a linear model (blue line) to it!
+
+```{r, echo=FALSE}
+reg<-lm(Galton$child~Galton$parent)
+par(mfrow=c(2,1))
+sunflowerplot(Galton$parent,Galton$child, xlim=c(62,78), ylim=c(60,78))
+sunflowerplot(Galton$parent,Galton$child, xlim=c(62,78), ylim=c(60,78))
+abline(reg, col="blue", lwd=3) 
+```
+
+Goto:
+=====
+
+https://chinlock.shinyapps.io/DataProductsProject
+
+## To find out your child's height!
