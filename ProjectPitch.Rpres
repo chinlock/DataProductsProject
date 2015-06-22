@@ -22,22 +22,25 @@ Worry???
 Well, Galton has some data
 ======
 
-Galton collected parents' and children's height. 
+Galton collected 928 observations of parents' and children's height. 
 
-How do we use this to predict a child's height based on the parent's height?
+A sampling is shown below:
 
 ```{r, echo=FALSE}
 library("UsingR")
 data(Galton)
-summary(Galton)
 head(Galton)
 ```
+
+**How do we use this to predict a child's height based on the parent's height?**
+
 
 Let's take a closer look
 =======
 
 The data points seems to be clustered around a liner relationship.  
-Let's fit a linear model (blue line) to it!
+Let's fit a linear model (blue line) to it.
+We can now use the linear model to __predict__ children's height!
 
 ```{r, echo=FALSE}
 reg<-lm(Galton$child~Galton$parent)

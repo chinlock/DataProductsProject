@@ -35,7 +35,9 @@ shinyUI(pageWithSidebar(
                     onto the data points.  You can check the checkbox to see the regression 
                     line.  A prediction of the child's height is done by applying the 
                     linear regression model to the parents height."),
-                h4("To use: Use the slider to enter a Parents Height, then hit GO")
+                h4("To use: Use the slider to enter a Parents Height, then hit GO"),
+                h4("Code @ GitHub: https://github.com/chinlock/DataProductsProject")
+                
         )
 
 ))

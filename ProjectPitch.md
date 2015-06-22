@@ -22,20 +22,10 @@ Worry???
 Well, Galton has some data
 ======
 
-Galton collected parents' and children's height. 
+Galton collected 928 observations of parents' and children's height. 
 
-How do we use this to predict a child's height based on the parent's height?
+A sampling is shown below:
 
-
-```
-     parent          child      
- Min.   :64.00   Min.   :61.70  
- 1st Qu.:67.50   1st Qu.:66.20  
- Median :68.50   Median :68.20  
- Mean   :68.31   Mean   :68.09  
- 3rd Qu.:69.50   3rd Qu.:70.20  
- Max.   :73.00   Max.   :73.70  
-```
 
 ```
   parent child
@@ -47,11 +37,15 @@ How do we use this to predict a child's height based on the parent's height?
 6   67.5  62.2
 ```
 
+**How do we use this to predict a child's height based on the parent's height?**
+
+
 Let's take a closer look
 =======
 
 The data points seems to be clustered around a liner relationship.  
-Let's fit a linear model (blue line) to it!
+Let's fit a linear model (blue line) to it.
+We can now use the linear model to __predict__ children's height!
 
 ![plot of chunk unnamed-chunk-2](ProjectPitch-figure/unnamed-chunk-2-1.png) 
 
